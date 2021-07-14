@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #41b883;
+  --secondary-color: #34495e;
+}
+
+body {
+  background-color: #1A1A1A;
+  font-family: 'Montserrat';
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem;
+  font-size: 4rem;
+  background: -webkit-linear-gradient(40deg, rgba(65,184,131,1) 0%, rgba(65,184,131,1) 38%, rgba(52,73,94,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#taskDefArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#taskDefArea #taskTyped {
+  width: 400px;
+  height: 100%;
+  outline: none;
+  padding: .5rem;
+  margin: 0 .8rem;
+  border-radius: 8px;
+  border: #1a1a1a 2px solid;
+  font-size: 1rem;
+  transition: all 0.3s;
+  background: transparent;
+  color: #fff;
+  border: var(--primary-color) 2px solid
+}
+
+#taskDefArea #taskTyped::placeholder {
+  color: #fff;
+}
+
+#taskDefArea #createTask{
+  position: relative;
+  border-radius: 8px;
+  color: #fff;
+  border: 2px solid var(--primary-color);
+  padding: 0.5rem;
+  background: transparent;
+  font-family: 'Montserrat';
+  cursor: pointer;
+  outline: none;
+  font-size: 1.3rem;
+  height: 100%;
+}
+
+#taskDefArea #createTask::before {
+  position: absolute;
+  content: '';
+  top:0;
+  left: 0;
+  height: 0%;
+  z-index: -1;
+  width: 100%;
+  background-color: var(--primary-color);;
+  transition: all 0.5s;
+}
+
+#taskDefArea #createTask:hover::before {
+  height: 100%;
+}
+
+#taskDefArea #createTask:hover{
+  color: #000;
+  transition: all 0.3s;
+}
+
+#tasksArea {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.taskBox {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  padding: 1rem 1.1rem;
+  border-radius: 10px;
+  margin: 1rem 1.3rem;
+  width: 400px;
+  max-width: 600px;
+  min-height: 200px;
+  ;
+}
+
+.taskBox .tasksInfos {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.7rem;
+}
+
+.taskBox .tasksInfos h2{
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
+.taskBox .tasksInfos .taskControl {
+  display: flex;
+  align-items: center;
+}
+
+.taskBox .tasksInfos .taskControl .deleteButton{
+  outline: none;
+  background: none;
+  border: none;
+  font-size: 1.7rem;
+  color: #c4c4c4;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.taskBox .tasksInfos .taskControl .deleteButton:hover{
+  color: #a00000;
+  transition: all .3s;
+}
+
+.taskBox .tasksInfos .taskControl .finishButton{
+  padding: 10px 14px;
+  background: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--secondary-color);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-family: 'Montserrat';
+  cursor: pointer;
+  box-shadow: 0px 8px 0px #318a62;
+  transition: all .4s;
+}
+
+.taskBox .tasksInfos .taskControl .finishButton:hover {
+  transform: translateY(2px);
+  box-shadow: 0px 6px 0px #318a62;
+  transition: all .2s;
+}
+.taskBox .tasksInfos .taskControl .finishButton:active {
+  transform: translateY(6px);
+  box-shadow: none;
+  transition: all .2s;
+}
+
+.taskBox span {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-color);
+  font-size: 1.3rem;
+  width: 100%;
+}
