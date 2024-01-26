@@ -1,0 +1,27 @@
+.priority-red {
+  color: #ef626c;
+}
+
+.priority-yellow {
+  color: #ffbf46;
+}
+
+.priority-green {
+  color: #115e32;
+}
+
+.border-normal {
+  border: 2px solid #888;
+}
+
+.border-red {
+  border: 2px solid #ef626c66;
+}
+
+.border-yellow {
+  border: 2px solid #ffbf4666;
+}
+
+.border-green {
+  border: 2px solid #115e3266;
+}
